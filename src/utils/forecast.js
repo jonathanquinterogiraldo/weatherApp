@@ -11,11 +11,9 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find weather. Try another search', undefined)
 
         } else {
-            callback(undefined,`Current temperature is ${body.current.temperature} degrees out. Weather description is ${body.current.weather_descriptions[0]}`
-                
-            )
+            
+            callback(undefined,`Current temperature is ${body.current.temperature} degrees out. Weather description is ${body.current.weather_descriptions[0]}, and humidity ${body.current.humidity}`)
         }
-
     })
 }
 
